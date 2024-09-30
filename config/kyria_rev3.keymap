@@ -69,7 +69,7 @@
 &kp LCTRL 	&kp Z 		&kp X 		&kp C		&kp V 	  	&kp B		&to GAMING	&trans	/**/	&trans 	&trans		&kp N   	&kp M 		&kp COMMA 	&kp PERIOD	&kp SLASH 	&kp LGUI
 						&kp F23 	&lt LALT ESC	&lt NAV TAB 	&kp SPACE  	&trans	/**/	&trans	&lt SYM RET	&lt NUM BSPC	&lt FUN DEL	&kp F24	
 			>;
-			sensor-bindings = <&vol_encoder &rgb_encoder>;
+			sensor-bindings = <&vol_encoder &vol_encoder>;
 		};
 
 /*
