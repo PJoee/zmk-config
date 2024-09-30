@@ -18,11 +18,11 @@
 
 &sensors {
     left_config {
-        triggers-per-rotation = <2>;
+        triggers-per-rotation = <36>;
     };
 
     right_config {
-        triggers-per-rotation = <2>;
+        triggers-per-rotation = <36>;
     };
 };
 
@@ -40,6 +40,11 @@
             		compatible = "zmk,behavior-sensor-rotate";
             		#sensor-binding-cells = <0>;
             		bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        	};
+		updn_encoder: updn_encoder {
+            		compatible = "zmk,behavior-sensor-rotate";
+            		#sensor-binding-cells = <0>;
+            		bindings = <&kp PG_UP>, <&kp PG_DN>;
         	};
     	};
 
@@ -69,7 +74,7 @@
 &kp LCTRL 	&kp Z 		&kp X 		&kp C		&kp V 	  	&kp B		&to GAMING	&trans	/**/	&trans 	&trans		&kp N   	&kp M 		&kp COMMA 	&kp PERIOD	&kp SLASH 	&kp LGUI
 						&kp F23 	&lt LALT ESC	&lt NAV TAB 	&kp SPACE  	&trans	/**/	&trans	&lt SYM RET	&lt NUM BSPC	&lt FUN DEL	&kp F24	
 			>;
-			sensor-bindings = <&vol_encoder &vol_encoder>;
+			sensor-bindings = <&vol_encoder &updn_encoder>;
 		};
 
 /*
